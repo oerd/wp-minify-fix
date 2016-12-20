@@ -184,27 +184,27 @@ class WPMinify {
 			$wpm_new_options['force_https'] = false;
 
 		if (strlen(trim($wpm_new_options['js_include'])) > 0)
-			$wpm_new_options['js_include'] = $this->array_trim(split(chr(10), str_replace(chr(13), '', $wpm_new_options['js_include'])));
+			$wpm_new_options['js_include'] = $this->array_trim(explode(chr(10), str_replace(chr(13), '', $wpm_new_options['js_include'])));
 		else
 			$wpm_new_options['js_include'] = array();
 
 		if (strlen(trim($wpm_new_options['js_exclude'])) > 0)
-			$wpm_new_options['js_exclude'] = $this->array_trim(split(chr(10), str_replace(chr(13), '', $wpm_new_options['js_exclude'])));
+			$wpm_new_options['js_exclude'] = $this->array_trim(explode(chr(10), str_replace(chr(13), '', $wpm_new_options['js_exclude'])));
 		else
 			$wpm_new_options['js_exclude'] = array();
 
 		if (strlen(trim($wpm_new_options['css_include'])) > 0)
-			$wpm_new_options['css_include'] = $this->array_trim(split(chr(10), str_replace(chr(13), '', $wpm_new_options['css_include'])));
+			$wpm_new_options['css_include'] = $this->array_trim(explode(chr(10), str_replace(chr(13), '', $wpm_new_options['css_include'])));
 		else
 			$wpm_new_options['css_include'] = array();
 
 		if (strlen(trim($wpm_new_options['css_exclude'])) > 0)
-			$wpm_new_options['css_exclude'] = $this->array_trim(split(chr(10), str_replace(chr(13), '', $wpm_new_options['css_exclude'])));
+			$wpm_new_options['css_exclude'] = $this->array_trim(explode(chr(10), str_replace(chr(13), '', $wpm_new_options['css_exclude'])));
 		else
 			$wpm_new_options['css_exclude'] = array();
 
 		if ( strlen(trim($wpm_new_options['uri_exclude'])) > 0 )
-			$wpm_new_options['uri_exclude'] = $this->array_trim(split(chr(10), str_replace(chr(13), '', $wpm_new_options['uri_exclude'])));
+			$wpm_new_options['uri_exclude'] = $this->array_trim(explode(chr(10), str_replace(chr(13), '', $wpm_new_options['uri_exclude'])));
 		else
 			$wpm_new_options['uri_exclude'] = array();
 
